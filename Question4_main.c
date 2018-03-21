@@ -119,4 +119,15 @@ for(n =0; n<=3;n++){
 	}
 	int turnaround_time[4]={0};
 	int waitingTime[4]={0};
+	for(i=0;i<4;i++)
+	{
+		turnaround_time[i]=complete[i]-arrivalTime[i];
+		waitingTime[i]=turnaround_time[i]-burstTime[i];
+	}
+	printf("process\t | arrival Time | burst time\t | turnaround time\t | waiting time \n");
+	for(i=0;i<4;i++){
+		printf("1\t | %d\t | \t | %d\t | \t | %d\t | \t | %d\n",arrivalTime[i],burstTime[i],turnaround_time[i],waitingTime[i]);
+	}
+	printf("average waiting time is %f .",(waitingTime[0]+waitingTime[1]+waitingTime[2]+waitingTime[3])/4.0);
+	printf("average turnaround time is %f .",(turnaround_time[0]+turnaround_time[1]+turnaround_time[2]+turnaround_time[3])/4.0);
 }
