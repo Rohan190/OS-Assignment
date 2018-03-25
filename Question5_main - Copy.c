@@ -10,7 +10,7 @@
 
  Algorithm Used -->  Round Robin algorithm with preempted High Prioritizing scheduler
 
-
+Author : Rohan
  */
 
 #include<stdio.h>
